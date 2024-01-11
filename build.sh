@@ -7,6 +7,7 @@ vite build --config content.config.js &&
 # Fix /dist
 mkdir dist &&
 cp public/* dist &&
+sass --no-source-map src/style.scss dist/style.css &&
 cp main_dist/assets/*.js dist/main.js &&
 cp content_dist/assets/*.js dist/content.js &&
 rm -rf main_dist content_dist
