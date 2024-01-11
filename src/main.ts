@@ -10,7 +10,7 @@ async function main() {
     for (const cl of allInfo.classes) {
         const class_box = document.createElement("div");
         class_box.classList.add("class_box");
-        class_box.innerText = cl.class_name;
+        class_box.innerHTML = cl.class_name;
         classes_cont.appendChild(class_box);
     }
 }

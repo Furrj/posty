@@ -26,7 +26,10 @@ export async function handle_data(all_info: T_AllInfo): Promise<void> {
 
     // Current class
     const curr_class = get_class_info_from_page();
-    if (!JSON.stringify(all_info).includes(curr_class.class_name)) {
+    if (
+        curr_class.class_name &&
+        !JSON.stringify(all_info).includes(curr_class.class_name)
+    ) {
         all_info.classes.push(curr_class);
     }
 
