@@ -5,8 +5,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "rm -rf dist && tsc && vite build && ./fixdist.sh",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "build": "./build.sh"
     },
     "devDependencies": {
         "typescript": "^5.2.2",

@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -6,14 +5,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: "src/main.ts",
-                content: "src/content.ts",
             },
             output: {
-                chunkFileNames: "dist/[name].js",
+                dir: "main_dist",
             },
         },
-    },
-    resolve: {
-        dedupe: ["dataHandlers.js"],
     },
 });
