@@ -1,0 +1,21 @@
+@import "./mixins_vars.scss";
+body {
+    width: 300px;
+    background: red;
+
+    @include centerCol;
+
+    #classes_cont {
+        width: 100%;
+        height: auto;
+
+        @include centerCol;
+
+        font-size: x-large;
+        padding: 5px;
+    }
+
+    .class_box {
+        border: $border;
+    }
+}
