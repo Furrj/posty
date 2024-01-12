@@ -5,10 +5,11 @@ import class_box from "./comps/class_box";
 const user_name = document.getElementById("user_name");
 const classes_cont = document.getElementById("classes_cont");
 
-async function main() {
+async function main(): Promise<void> {
     const allInfo: T_AllInfo = await get_storage_data_on_init();
 
     user_name.innerText = allInfo.user_name;
+    console.log(`Name: ${allInfo.user_name}`);
 
     let id = 1;
     for (const cl of allInfo.classes) {
