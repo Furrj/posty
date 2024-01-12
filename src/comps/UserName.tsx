@@ -1,6 +1,10 @@
 import { h } from "start-dom-jsx";
 
-const UserName = (props: any): JSX.Element => {
+type T_Props = {
+    user_name: string;
+};
+
+const UserName = (props: T_Props): JSX.Element => {
     if (!props.user_name) {
         props.user_name = "Please go to Brightspace to initialize";
     }

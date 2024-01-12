@@ -1,4 +1,4 @@
-import { T_AllInfo, initAllInfo } from "./types";
+import { T_AllInfo, initAllInfo } from "../types";
 import {
     get_user_name_from_page,
     get_class_info_from_page,

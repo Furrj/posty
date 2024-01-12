@@ -1,4 +1,4 @@
-import { T_ClassInfo, initClassInfo } from "./types";
+import { T_ClassInfo, initClassInfo } from "../types";
 import { deep_copy } from "./dataHandlers";
 
 export function get_user_name_from_page(): string {
@@ -22,6 +22,7 @@ export function get_class_info_from_page(): T_ClassInfo {
 
     if (el) {
         class_info.class_name = el.innerHTML.toString();
+        class_info.class_name = class_info.class_name.replace("&amp;", "&");
         console.log(`Class found: ${class_info.class_name}`);
     } else {
         console.log("Couldn't find class on page");
