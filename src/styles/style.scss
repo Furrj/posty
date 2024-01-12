@@ -7,46 +7,68 @@
     color: white;
 }
 
-body {
+html {
     width: 300px;
-    height: 400px;
+    height: 300px;
+
+    overflow: hidden;
+}
+
+body {
+    @include fs-percent;
+
+    overflow: auto;
 
     #root {
-        @include fs-percent;
+        width: 100%;
+        height: fit-content;
 
         @include centerCol;
 
         overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
 
         background: $sc_main;
 
         border: 0.5em solid $sc_secondary;
-        padding-top: 10px;
+        padding: 10px;
 
         #user_name {
             width: 100%;
-            height: 100px;
+            height: fit-content;
+            flex-shrink: 0;
 
-            @include centerCol;
+            text-align: center;
+
+            border: $border;
         }
 
         #classes_cont {
-            @include fs-percent;
+            height: fit-content;
+            width: auto;
 
             @include centerCol;
+            flex-shrink: 0;
+            gap: 5px;
+            border: $border;
 
             font-size: x-large;
             padding: 5px;
         }
 
         .class_box {
-            @include fs-percent;
+            width: 100%;
+            height: fit-content;
 
             @include centerCol;
             text-align: center;
 
             border: $border;
+
+            &:hover {
+                background: $hover;
+                cursor: pointer;
+            }
         }
     }
 }
