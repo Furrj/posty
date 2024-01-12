@@ -8,7 +8,7 @@ export async function get_storage_data_on_init(): Promise<T_AllInfo> {
     let all_info: T_AllInfo = deep_copy(initAllInfo);
 
     try {
-        const raw_storage = await chrome.storage.local.get(["data"]);
+        const raw_storage = await browser.storage.local.get(["data"]);
         if (raw_storage.data !== undefined) {
             all_info = JSON.parse(raw_storage.data);
         }
@@ -33,7 +33,7 @@ export async function handle_data(all_info: T_AllInfo): Promise<void> {
         all_info.classes.push(curr_class);
     }
 
-    await chrome.storage.local.set({ data: JSON.stringify(all_info) });
+    await browser.storage.local.set({ data: JSON.stringify(all_info) });
 }
 
 export function deep_copy<T>(original: T): T {
