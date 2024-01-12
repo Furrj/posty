@@ -30,6 +30,7 @@ export async function handle_data(all_info: T_AllInfo): Promise<void> {
         curr_class.class_name &&
         !JSON.stringify(all_info).includes(curr_class.class_name)
     ) {
+        curr_class.id = all_info.classes.length + 1;
         all_info.classes.push(curr_class);
     }
 

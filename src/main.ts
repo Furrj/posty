@@ -16,6 +16,11 @@ async function main() {
         id++;
         classes_cont.appendChild(new_box);
     }
+
+    // Handle no data
+    if (!allInfo.user_name) {
+        user_name.innerText = "Please go to Brightspace to initialize";
+    }
 }
 
 // MAIN

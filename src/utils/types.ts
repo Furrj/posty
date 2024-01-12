@@ -9,9 +9,11 @@ export const initAllInfo: T_AllInfo = {
 };
 
 export type T_ClassInfo = {
+    id: number;
     class_name: string;
 };
 
 export const initClassInfo: T_ClassInfo = {
+    id: -1,
     class_name: "",
 };

@@ -1,10 +1,10 @@
-# # Build
+# Build
 rm -rf dist &&
 npx tsc &&
 vite build --config main.config.js &&
 vite build --config content.config.js &&
 
-# Fix /dist
+# Fix dist
 mkdir dist &&
 cp public/* dist &&
 sass --no-source-map src/styles/style.scss dist/style.css &&
