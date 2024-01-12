@@ -9,7 +9,7 @@
 
 html {
     width: 300px;
-    height: 300px;
+    height: 400px;
 
     overflow: hidden;
 }
@@ -21,7 +21,7 @@ body {
 
     #root {
         width: 100%;
-        height: fit-content;
+        min-height: 100%;
 
         @include centerCol;
 
@@ -39,8 +39,6 @@ body {
             flex-shrink: 0;
 
             text-align: center;
-
-            border: $border;
         }
 
         #classes_cont {
@@ -50,9 +48,8 @@ body {
             @include centerCol;
             flex-shrink: 0;
             gap: 5px;
-            border: $border;
 
-            font-size: x-large;
+            font-size: large;
             padding: 5px;
         }
 
