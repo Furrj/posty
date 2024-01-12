@@ -8,12 +8,12 @@
         "preview": "vite preview",
         "build": "./build.sh"
     },
+    "dependencies": {
+        "start-dom-jsx": "^1.0.0-beta.1"
+    },
     "devDependencies": {
         "@types/chrome": "^0.0.256",
         "typescript": "^5.2.2",
         "vite": "^5.0.8"
-    },
-    "dependencies": {
-        "start-dom-jsx": "^1.0.0-beta.1"
     }
 }
