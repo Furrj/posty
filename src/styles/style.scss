@@ -67,5 +67,28 @@ body {
                 cursor: pointer;
             }
         }
+
+        .progress_box {
+            @include centerCol;
+            flex-direction: row;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .check {
+            margin-right: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .label {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
